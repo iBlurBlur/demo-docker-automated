@@ -16,9 +16,9 @@
 # Re-Tagging an existing local
 
 - docker pull alpine
-- docker tag alpine iblurblur/my_alpine:1.0
+- docker tag alpine iblurblur/my-alpine:1.0
 - docker images
-- docker push iblurblur/my_alpine:1.0
+- docker push iblurblur/my-alpine:1.0
 
 # Searching for Repositories
 
@@ -28,3 +28,7 @@ https://docs.docker.com/engine/reference/commandline/search/
   mark: AUTOMATED is automated builds
 - docker search --filter stars=100 --filter is-official=true --format "table {{.Name}}\t{{.StarCount}}" mongo
 
+---
+
+# Automated builds
+docker run -p 1150:8080 --name some-my-node -d iblurblur/my-node
